@@ -1,0 +1,124 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-inline: 9rem;
+  padding-block: 1.2rem;
+  border-bottom: solid 1px rgba(233, 224, 224, 20%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(8, 8, 138);
+  text-decoration: none;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  color: #333;
+  gap: 1rem;
+}
+
+.navbar__links li :where(a) {
+  text-decoration: none;
+  font-size: 1rem;
+  color: inherit;
+  font-weight: 2px;
+}
+
+.navbar__links__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.navbar__links__btn :nth-child(1) {
+  padding: 0.7rem;
+  border-radius: 4px;
+  background: #f6f2f2;
+  font-size: 14px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: #333;
+  box-shadow: rgba(0, 0, 0, 0.3);
+}
+
+.navbar__links__btn :nth-child(1):hover {
+  background: orange;
+  color: white;
+}
+
+.navbar__links__btn :nth-child(2) {
+  padding: 0.7rem;
+  border-radius: 4px;
+  background: #f6f1f1;
+  font-size: 14px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: #fff;
+  background: #20325a;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.navbar__links__btn :nth-child(2):hover {
+  background: #30436d;
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 5px;
+  padding: 0.1rem;
+}
+
+.menu:hover {
+  background-color: orange;
+  color: white;
+}
+
+@media screen and (max-width: 888px) {
+  .navbar {
+    padding-inline: 2rem;
+    padding-block: 1rem;
+  }
+
+  .navbar {
+    padding-inline: 2rem;
+  }
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__logo {
+    font-size: 1.5rem;
+  }
+  .navbar {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .menu {
+    display: inline;
+  }
+  .menu:hover {
+    opacity: 0.8;
+  }
+}

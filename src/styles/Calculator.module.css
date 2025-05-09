@@ -1,0 +1,562 @@
+.claclCon {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding: 2rem 1rem;
+}
+
+.ConTitle {
+  font-size: 1.4rem;
+  color: #172f64;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.ConBtnTitle {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  background: #f9fafb;
+  padding: 0.3rem;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.ConBtnTitle button {
+  width: 100%;
+  border: none;
+  background: none;
+  color: #172f64;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.ConBtnTitle button.active {
+  background-color: orange;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+.CalcContent {
+  width: 100%;
+  max-width: 1500px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.firstPartContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 3rem;
+  margin: 0 auto;
+}
+
+.Rangeone {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  gap: 0.4rem;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.7rem;
+  align-items: start;
+  margin: 0 auto;
+}
+
+.inputs label {
+  font-size: 0.9rem;
+  color: #172f64;
+  font-family: "Sans-serif" sans-serif;
+}
+
+.input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background: #f9fafb;
+  border: solid 1px #e3e9e9;
+  padding: 0.2rem 0.8rem;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+  direction: ltr;
+}
+
+.input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.4rem 1rem;
+  background: transparent;
+  direction: rtl;
+  unicode-bidi: plaintext;
+  text-align: right;
+  font-size: 1rem;
+  color: gray;
+}
+
+.firstRange {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  gap: 0.7rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.rangeSlide {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.7rem;
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border: solid 1px rgb(238, 229, 229);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.rangeSlide:hover {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.rangeSlide span {
+  font-size: 0.9rem;
+  color: #172f64;
+}
+
+.rangeSlide input {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 20px;
+  background: #fff;
+  border-radius: 5px;
+  outline: none;
+  position: relative;
+  /* overflow: hidden; */
+  direction: ltr;
+}
+
+.rangeSlide input::-webkit-slider-runnable-track {
+  height: 8px;
+  background: transparent;
+}
+
+.rangeSlide input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  background: white;
+  border: 2px solid #172f64;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 999999;
+  margin-top: -10px;
+}
+
+.rangeSlide input::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10px;
+  background-color: #172f64;
+  width: var(--fill, 0%);
+  z-index: 1;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.rangeSlide input::-moz-range-track {
+  height: 10px;
+  background: white;
+  border-radius: 5px;
+}
+
+.rangeSlide input::-moz-range-progress {
+  height: 10px;
+  background: #172f64;
+  border-radius: 5px;
+}
+
+.rangeSlide input::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  background: white;
+  border: 2px solid #172f64;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.rangContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.rangContent span {
+  font-size: 0.8rem;
+}
+
+.month {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.secSlide {
+  display: flex;
+  width: 100%;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0.6rem;
+  margin: 0 auto;
+}
+
+.Range {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  padding: 0.7rem 0.9rem;
+  border: solid 1px rgb(225, 221, 221);
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.RangeContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #172f64;
+}
+
+.Range input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 20px;
+  background: #fff;
+  border-radius: 5px;
+  outline: none;
+  position: relative;
+  direction: ltr;
+  overflow: hidden;
+}
+
+.Range input[type="range"]::-webkit-slider-runnable-track {
+  height: 10px;
+  background: transparent;
+  border-radius: 5px;
+}
+
+.Range input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 18px;
+  width: 18px;
+  background: #fff;
+  border: 2px solid #172f64;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  margin-top: -4px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.Range input[type="range"]::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 10px;
+  background-color: #172f64;
+  width: var(--fill, 0%);
+  z-index: 1;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.Range input[type="range"]::-moz-range-track {
+  height: 10px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.Range input[type="range"]::-moz-range-progress {
+  height: 10px;
+  background: #172f64;
+  border-radius: 5px;
+}
+
+.Range input[type="range"]::-moz-range-thumb {
+  height: 18px;
+  width: 18px;
+  background: #fff;
+  border: 2px solid #172f64;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.CalcBtn {
+  width: 200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0.7rem;
+  border: none;
+  border-radius: 5px;
+  background: #172f64;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.CalcBtn:hover {
+  background: orange;
+}
+
+.calcResult {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0.8rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: #fafafa;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.calcResult h2 {
+  font-size: 1.2rem;
+  padding: 1rem;
+  color: #172f64;
+}
+
+.CalcResultNum {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.CalcResultNum span {
+  color: #172f64;
+  font-size: 0.9rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
+.calcResultBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+}
+
+.calcResultBottom h3 {
+  color: #172f64;
+  font-size: 1rem;
+}
+
+.calcResultBottom span {
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.line {
+  width: 90%;
+  height: 1px;
+  background: linear-gradient(to right, rgb(205, 204, 204), rgb(217, 215, 215));
+  margin: 0 auto;
+}
+
+.info {
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.infoSon {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.infoSon a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: rgb(100, 99, 99);
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.4rem;
+  background: #fff;
+  border-radius: 5px;
+  padding: 2.4rem 2rem;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.information h2 {
+  font-size: 1.3rem;
+  color: #172f64;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.alert {
+  background: #eff6ff;
+  padding: 0.7rem 0.7rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1000px;
+  border-right: solid 3px rgb(157, 157, 252);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  text-align: start;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.alertTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.alertTitle h3 {
+  font-size: 1rem;
+  color: #172f64;
+  font-weight: bold;
+}
+
+.alert p {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: rgb(97, 97, 235);
+  text-align: start;
+  font-family: "Courier New", Courier, monospace;
+  line-height: 1.4rem;
+  width: 100%;
+}
+
+.infoB {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  width: 100%;
+  gap: 2rem;
+}
+
+.drops {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem 1.4rem;
+}
+.drops ul li {
+  color: rgb(99, 99, 228);
+  font-weight: 700;
+  text-align: start;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.drops h1 {
+  font-size: 1.4rem;
+  color: #4c6395;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+@media screen and (max-width: 880px) {
+  .drops ul li {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    width: 110%;
+  }
+  .drops {
+    padding: 0;
+  }
+  .Rangeone {
+    flex-direction: column;
+  }
+  .secSlide {
+    flex-direction: column;
+  }
+  .firstRange {
+    flex-direction: column;
+    width: 100%;
+  }
+  .claclCon {
+    width: 100%;
+  }
+  .CalcBtn {
+    width: 100%;
+  }
+  .calcResult {
+    width: 100%;
+  }
+  .calcResult h2 {
+    font-size: 1rem;
+  }
+  .CalcResultNum {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  .info {
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .info a {
+    font-size: 0.8rem;
+  }
+  .alert {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .CalcContent {
+    flex-direction: row;
+  }
+}

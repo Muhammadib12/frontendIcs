@@ -1,0 +1,181 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-family: "Sans-serif", sans-serif;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: none;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  scale: 1.01;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: #fff;
+  gap: 0.8rem;
+}
+
+.cardTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardTitle h2 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.cardTitle span {
+  font-size: 1rem;
+  color: orange;
+}
+
+.numberH {
+  font-size: 1rem;
+  color: #656464;
+}
+
+.cardDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #656464;
+  margin-top: 0.5rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.cardDetails span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cardDetails div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cardActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0.9rem;
+  font-size: 0.9rem;
+  background: #fff;
+}
+
+.cardActions :where(a) {
+  text-decoration: none;
+  color: #444;
+  font-weight: 400;
+  position: relative;
+}
+
+.cardActions :where(a:hover)::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: rgb(160, 159, 159);
+  bottom: -4px;
+  left: 0;
+}
+
+.cardActions .call {
+  color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.cardActions .call:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: orange;
+  bottom: -4px;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.heart {
+  border-radius: 50%;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background: #f0f0f0;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.heart:hover {
+  background: #dcd4d4;
+  opacity: 1;
+}
+
+.spanTop {
+  border: none;
+  width: fit-content;
+
+  background: orange;
+  position: absolute;
+  padding: 0.5rem;
+  top: 10px;
+
+  right: 10px;
+  color: #000;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+}
+
+.active {
+  color: orange;
+  fill: orange;
+}
+
+.blue {
+  background: #172f64;
+  color: #fff;
+}
+
+@media (min-width: 850px) {
+  .card {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,147 @@
+.signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: start;
+  height: fit-content;
+  gap: 1rem;
+  margin: 4rem auto;
+  width: 90%;
+  max-width: 450px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+  font-family: "Sans-serif", sans-serif;
+}
+
+.signup h1 {
+  font-size: 1.4rem;
+  color: #111;
+}
+
+.signup label {
+  font-size: 0.9rem;
+  color: #111;
+}
+
+.signup p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.signup form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.signup form input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 1);
+  background: #f5f5f5;
+}
+
+.signup form input::placeholder {
+  color: #aaa;
+  font-size: 13px;
+}
+.name {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.name input {
+  width: 100%;
+}
+
+.crad {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox input {
+  width: 0.1rem;
+  height: 0.1rem;
+  appearance: none; /* يخفي الشكل الافتراضي */
+  background: rgb(211, 206, 206);
+  border: 2px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.checkbox input:checked {
+  background: rgb(7, 208, 7);
+}
+.checkbox input:checked::after {
+  content: "✔️";
+  position: absolute;
+  top: 0;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+}
+
+.submit {
+  background: #172f64;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin-top: 0.7rem;
+}
+.login a {
+  color: #172f64;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 780px) {
+  .name {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,423 @@
+.searchContainer {
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+  flex-direction: column;
+  padding: 4rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.searchContainer h1 {
+  font-size: 1.5rem;
+  font-weight: 450;
+  color: #172f64;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.searchBar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: fit-content;
+}
+
+.serachCon {
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  text-align: start;
+}
+
+.select {
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: start;
+  background: #f9fafb;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropItems {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  top: 110%;
+  right: 0;
+  width: 100%;
+  background: #fffdfd;
+  box-shadow: 10px 2px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  border-radius: 0 0 5px 5px;
+  z-index: 1000;
+}
+
+.dropItems button {
+  width: 100%;
+  border: none;
+  padding: 0.6rem 0.6rem;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  color: #0c2251;
+}
+
+.dropItems button:hover {
+  background: orange;
+  color: #fff;
+  cursor: pointer;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: start;
+}
+
+.searchInput h2 {
+  font-size: 0.8rem;
+  color: #172f64;
+}
+
+.searchInput span {
+  font-size: 0.8rem;
+  color: rgb(110, 110, 110);
+}
+
+.searchInput2 {
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  text-align: start;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.searchInput2 h2 {
+  font-size: 0.9rem;
+  color: #172f64;
+}
+
+.searchInput2 span {
+  font-size: 0.8rem;
+  color: rgb(110, 110, 110);
+}
+
+.search2Con {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  text-align: start;
+}
+
+.select2 {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+}
+
+.select2dropdown {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: solid 1px #ccc;
+  padding: 0.5rem 0.6rem;
+  background: #f9fafb;
+  justify-content: space-between;
+  position: relative;
+}
+
+.select2dropdown:first-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.select2dropdown:last-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.v {
+  background: rgba(255, 213, 0, 0.844) !important;
+}
+
+.openBottom {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 0.4rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.openBottom span {
+  font-size: 0.8rem;
+  color: #0c2251;
+  text-align: start;
+}
+
+.outerBar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0.5rem 0.4rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.outerBar h2 {
+  font-size: 1.2rem;
+  color: #172f64;
+  text-align: start;
+}
+
+.numberinp {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.inputs {
+  display: flex;
+  width: 100%;
+  border-bottom: solid 1px #0c2251;
+  padding: 2rem;
+}
+
+.inputs input {
+  padding: 0.6rem 0.3rem;
+  border: solid 1px #c7c4c4;
+  outline: none;
+  background: #f5f5f5;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+.inputs :first-child {
+  border-radius: 0 5px 5px 0;
+}
+.inputs :last-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.parts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: solid 1px #0c2251;
+  padding: 2rem;
+}
+
+.flexTh {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.check input {
+  opacity: 0;
+  position: absolute;
+}
+
+.check label {
+  position: relative;
+  padding-right: 30px;
+  cursor: pointer;
+  margin-right: 20px;
+  user-select: none;
+  color: #0c2251;
+  font-size: 0.95rem;
+}
+
+.check label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 16px;
+  height: 16px;
+  border: solid 2px #0c2251;
+  width: 15px;
+  height: 15px;
+  border-radius: 5px;
+}
+
+.check input:checked + label::after {
+  content: "✔";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 4px;
+  font-size: 12px;
+  color: #0c2251;
+}
+
+.formOuter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  gap: 1rem;
+  padding: 1.5rem;
+  align-items: start;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.radio {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.radio input {
+  opacity: 0;
+}
+
+.radio label::before {
+  content: "";
+  position: absolute;
+  transform: translateY(-1px);
+  top: 0;
+  right: -4px;
+  width: 15px;
+  height: 15px;
+  border: solid 2px #0c2251;
+  border-radius: 50%;
+}
+
+.radio input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 0.7px;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #0c2251;
+  border-radius: 50%;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.searchbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 400px;
+  cursor: pointer;
+  margin: 20px auto;
+  padding: 1rem 1rem;
+  position: relative;
+  background: #172f64;
+  border-radius: 10px;
+  gap: 1rem;
+}
+
+.searchbtn button {
+  width: 100%;
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+
+.searchbtn .icon {
+  position: absolute;
+  top: 35%;
+  right: 50px;
+  color: #fff;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 780px) {
+  .serachCon {
+    flex-direction: column;
+  }
+
+  .search2Con {
+    flex-direction: column;
+  }
+  .searchContainer {
+    margin: 1.5rem auto;
+    width: 100%;
+    padding: 0.2rem;
+  }
+  .inputs {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .serachCon {
+    flex-direction: row;
+  }
+}

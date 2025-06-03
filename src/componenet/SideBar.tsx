@@ -9,7 +9,7 @@ import { logoutUser } from "./../redux/slices/authSlice";
 function SideBar() {
   const dispatch = useDispatch<AppDispatch>();
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
-  const user = useSelector((state: RootState) => state.auth.user);
+
 
   const handleLogout = () => {
     dispatch(logoutUser());

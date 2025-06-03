@@ -8,7 +8,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import axiosInstance from "../utils/axios";
-import ShimmerLoading from "./ShimmerLoading";
+
 
 type UserGrowthData = {
   users: number;

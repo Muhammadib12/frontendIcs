@@ -23,7 +23,7 @@ function Charts() {
       try {
        
         const res = await axiosInstance.get("/api/admin/stats");
-       
+          setStats(res.data);
       } catch (err) {
       } 
     };

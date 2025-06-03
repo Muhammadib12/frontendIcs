@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useState } from "react";
+// import axios from "axios";
 import CardDashBoard from "./../componenet/CardDashBoard";
 import { Users, Home, Eye, ArrowRight } from "lucide-react";
 import styles from "./../styles/Charts.module.css";
@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import UserGrowthChart from "../componenet/UserGrowthChart";
 import PropertyDistributionChart from "../componenet/PropertyDistributionChart";
 import RecentActivityList from "../componenet/RecentActivityList";
-import ShimmerLoading from "../componenet/ShimmerLoading";
+// import ShimmerLoading from "../componenet/ShimmerLoading";
 
 function Charts() {
   const [stats, setStats] = useState<{

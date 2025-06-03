@@ -284,7 +284,7 @@ function Calculator() {
                   annualRate: valueRe,
                   prime,
                   fixed,
-                  variable,
+                
                 });
 
                 setResult(result1);

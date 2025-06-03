@@ -2,10 +2,10 @@ import  { useEffect, useRef, useState } from "react";
 import styles from "./../styles/NavBar.module.css";
 import { Link } from "react-router-dom";
 import {
-  AlertTriangleIcon,
+
   ChartColumn,
   House,
-  LogIn,
+
   LogOut,
   Menu,
   Settings,

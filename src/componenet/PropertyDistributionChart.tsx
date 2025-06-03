@@ -230,7 +230,7 @@ function PropertyDistributionChart() {
                 paddingTop: "1rem",
                 fontSize: "0.85rem",
               }}
-              formatter={(value: string, entry: any) => {
+              formatter={(value: string) => {
                 const dataItem = data.find((item) => item._id === value);
                 const percentage = dataItem
                   ? ((dataItem.count / totalCount) * 100).toFixed(1)

@@ -186,7 +186,7 @@ function PropertyDistributionChart() {
               onMouseEnter={(_, index) => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              {data.map((entry, index) => (
+              {data.map((index) => (
                 <Cell
                   key={`cell-${index}`}
                   fill={`url(#gradient-${index % COLORS.length})`}

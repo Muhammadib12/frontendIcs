@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styles from "./../styles/Calculator.module.css";
 
 import downloadPDF from "./../utils/download.ts";
-import calculateMortgage from "../utils/calculateMortgage";
+import calculateMortgage from "./../utils/calculateMortgage";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store.ts";
 import BlockedAccount from "../componenet/BlockedAccount.tsx";

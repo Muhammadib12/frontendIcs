@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./../styles/AddCard.module.css";
 import { Link } from "react-router-dom";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import DropdownSelect from "./../componenet/DropdownSelect";
 import { RootState, AppDispatch } from "../redux/store";
-import { setCards } from "./../redux/slices/cardReducer";
+// import { setCards } from "./../redux/slices/cardReducer";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { createCard } from "./../redux/slices/cardReducer";
@@ -18,7 +18,7 @@ function AddCard() {
     return null;
   }
   const dispatch = useDispatch<AppDispatch>();
-  const cards = useSelector((state: RootState) => state.cards.items);
+  // const cards = useSelector((state: RootState) => state.cards.items);
   const [status, setStatus] = useState({
     status: "למכירה",
     isOpen: false,

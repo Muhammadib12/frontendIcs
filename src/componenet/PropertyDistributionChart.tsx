@@ -186,19 +186,17 @@ function PropertyDistributionChart() {
               onMouseEnter={(_, index) => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              {data.map((index) => (
-                <Cell
-                  key={`cell-${index}`}
-                  fill={`url(#gradient-${index % COLORS.length})`}
-                  style={{
-                    filter:
-                      hoveredIndex === index
-                        ? "brightness(1.1)"
-                        : "brightness(1)",
-                    transition: "all 0.3s ease",
-                  }}
-                />
-              ))}
+        {data.map((item, index) => (
+  <Cell
+    key={`cell-${item._id}`}
+    fill={`url(#gradient-${index % COLORS.length})`}
+    style={{
+      filter: hoveredIndex === index ? "brightness(1.1)" : "brightness(1)",
+      transition: "all 0.3s ease",
+    }}
+  />
+))}
+
             </Pie>
 
             <Tooltip

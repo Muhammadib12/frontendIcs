@@ -5,7 +5,7 @@ import styles from "./../styles/CardDashBoard.module.css";
 interface CardDashBoardProps {
   title: string;
   value: string | number;
-  description: string;
+
   icon: React.ReactNode;
   change: number;
 }
@@ -13,7 +13,7 @@ interface CardDashBoardProps {
 function CardDashBoard({
   title,
   value,
-  description,
+
   icon,
   change,
 }: CardDashBoardProps) {

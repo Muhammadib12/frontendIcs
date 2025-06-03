@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import axios from "axios";
+
 import { AppDispatch } from "../store"; // تأكد أن لديك store مضبوط ويحتوي على AppDispatch
 import axiosInstance from "../../utils/axios";
 

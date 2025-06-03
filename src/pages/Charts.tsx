@@ -46,21 +46,21 @@ function Charts() {
           value={stats?.users.count ?? 0}
           change={stats?.users.change ?? 0}
           icon={<Users />}
-          description="משתמשים שנרשמו החודש"
+         
         />
         <CardDashBoard
           title="מודעות פעילות"
           value={stats?.cards.count ?? 0}
           change={stats?.cards.change ?? 0}
           icon={<Home />}
-          description="מודעות שפורסמו החודש"
+         
         />
         <CardDashBoard
           title="ביקורים חודשיים"
           value={stats?.visits.count ?? 0}
           change={stats?.visits.change ?? 0}
           icon={<Eye />}
-          description="ביקורים שנרשמו החודש"
+         
         />
       </div>
       <div className={styles.chartsSection}>

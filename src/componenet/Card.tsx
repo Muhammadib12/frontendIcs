@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./../styles/Card.module.css";
 import { Phone, Ruler, Bed, Bath, Heart } from "lucide-react";

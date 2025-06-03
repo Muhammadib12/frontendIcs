@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import axiosInstance from "../utils/axios";
 import {
   Search,
   Trash2,
-  ShieldCheck,
+ 
   Ban,
   Users,
   MoreVertical,
-  Filter,
+
   UserPlus,
   Unlock,
 } from "lucide-react";

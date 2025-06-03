@@ -9,7 +9,7 @@ import {
   Settings,
   User,
 } from "lucide-react";
-import React, { useState } from "react";
+import  { useState } from "react";
 import styles from "./../styles/Profile.module.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";

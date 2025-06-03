@@ -1,0 +1,43 @@
+.shimmer {
+  background: #f6f7f8;
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150px;
+  height: 100%;
+  width: 150px;
+  background: linear-gradient(to right, #f6f7f8 0%, #e0e0e0 50%, #f6f7f8 100%);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -150px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.imageShimmer {
+  height: 120px;
+  background: #ddd;
+  margin-bottom: 10px;
+}
+
+.textShimmer {
+  height: 16px;
+  background: #ddd;
+  margin: 5px 0;
+}
+
+.textShimmerShort {
+  width: 60%;
+  height: 14px;
+  background: #ddd;
+}

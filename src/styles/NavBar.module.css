@@ -38,6 +38,95 @@
   gap: 0.8rem;
 }
 
+.navbar__links__btn1 {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 1.2rem;
+  cursor: pointer;
+}
+
+.usernameCon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 0.7rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  width: 150px;
+}
+
+.userNav:hover {
+  background: orange;
+  color: #fff;
+}
+
+.userRole {
+  position: absolute;
+
+  top: 100%;
+  right: 0;
+  background: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.3 ease-in-out;
+  width: 110%;
+  z-index: 999;
+}
+
+.userRole:hover {
+  color: #000;
+}
+
+.roles {
+  display: flex;
+  gap: 0.4rem;
+  width: 100%;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.6rem;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+}
+
+.roles :where(a) {
+  font-size: 0.8rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  color: #555;
+}
+
+.roles:hover {
+  background: orange;
+  color: #f6f1f1;
+}
+
+.line {
+  width: 100%;
+  background: #5555;
+  height: 1px;
+}
+
+.rolesL {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 100%;
+}
+.rolesL span {
+  font-size: 0.9rem;
+}
+
 .navbar__links__btn :nth-child(1) {
   padding: 0.7rem;
   border-radius: 4px;
@@ -94,10 +183,28 @@
   color: white;
 }
 
+.userNav {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #20325a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
 @media screen and (max-width: 888px) {
   .navbar {
     padding-inline: 2rem;
     padding-block: 1rem;
+  }
+
+  .username {
+    display: none;
   }
 
   .navbar {
@@ -122,3 +229,152 @@
     opacity: 0.8;
   }
 }
+.asideRoute {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem 0.4rem;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  font-size: 0.8rem;
+}
+
+.asideRoute:hover {
+  background: orange;
+  color: #fff;
+}
+
+.asideRoute :where(a) {
+  text-decoration: none;
+  color: #fff;
+}
+
+.adminTag {
+  color: #e91e63;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.blocked {
+  color: red;
+}
+
+.adminTag {
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #000;
+  width: fit-content;
+  transition: all 0.3s ease-in-out;
+}
+
+.adminTag:hover {
+  background: orange;
+  color: #fff;
+}
+.roles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem 0.4rem;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  font-size: 0.8rem;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: orange;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  z-index: 999;
+}
+
+.username {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+  width: 200px;
+  background: #20325a;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+
+.username:hover {
+  background: orange;
+  color: #fff;
+}
+.circle:hover {
+  background: #20325a;
+  color: #fff;
+}
+
+@media screen and (max-width: 920px) {
+  .userRole {
+    position: fixed;
+    top: 60px; /* حسب ارتفاع الناف بار */
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: auto;
+    border-radius: 0;
+    background: white;
+    padding: 1rem 1.5rem;
+  }
+
+  .roles {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: #555;
+  }
+
+  .roles :where(a) {
+    font-size: 1rem;
+  }
+
+  .rolesL {
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .line {
+    margin: 0.5rem 0;
+  }
+}
+
+/*  */

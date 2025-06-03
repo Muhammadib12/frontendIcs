@@ -1,0 +1,58 @@
+.chartsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  padding: 2.5rem 1rem;
+  gap: 4rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.chartsContainer h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #172f64;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #172f64;
+  text-decoration: none;
+  background: orange;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease-in-out;
+  color: #fff;
+  cursor: pointer;
+}
+
+.backLink:hover {
+  background: #fff;
+  color: orange;
+}
+
+.chartsSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 5rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .chartsSection {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,50 @@
+.card {
+  padding: 1rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.card p {
+  font-size: 0.8rem;
+  color: #b3afaf;
+  margin: 0.5rem 0;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  transform: translateY(-2px) translateX(-2px);
+}
+
+.valueRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: #172f64;
+}
+
+.changeRow {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.greenText {
+  color: green;
+}
+
+.redText {
+  color: red;
+}
+
+.neutralText {
+  color: gray;
+}

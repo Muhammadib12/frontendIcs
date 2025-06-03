@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { ChevronDown, Search } from "lucide-react";
 import styles from "./../styles/SearchHo.module.css";
 import SearchResult from "../componenet/SearchResult";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setFilters } from "./../redux/slices/filterSlice";
+import { RootState } from "../redux/store";
+import BlockedAccount from "../componenet/BlockedAccount";
 function SearchHo() {
   const prices = [
     "₪ 500,000",
@@ -12,6 +14,8 @@ function SearchHo() {
     "₪ 2,000,000",
     "₪ 3,000,000",
   ];
+
+  const user = useSelector((state: RootState) => state.auth.user);
 
   const dispatch = useDispatch();
 
@@ -127,6 +131,10 @@ function SearchHo() {
       })
     );
   };
+
+  if (user?.status === "blocked") {
+    return <BlockedAccount />;
+  }
 
   return (
     <div

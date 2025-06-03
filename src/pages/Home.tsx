@@ -2,12 +2,18 @@ import styles from "./../styles/Home.module.css";
 import { Link } from "react-router-dom";
 import Card from "../componenet/Card";
 import { ArrowLeft, Calculator, House, Search } from "lucide-react";
-import { useSelector } from "react-redux";
-import { RootState } from "./../redux/store";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "./../redux/store";
 import stylesCard from "./../styles/ServiceCard.module.css";
+import { useEffect } from "react";
+import { fetchCards } from "./../redux/slices/cardReducer";
+import CardShimmer from "../componenet/CardShimmer";
+import WakeUpServer from "../componenet/WakeUpServer";
 
 function Home() {
   const cards = useSelector((state: RootState) => state.cards.items);
+  const loading = useSelector((state: RootState) => state.cards.loadingCard);
+
   const top3Cards = [...cards]
     .sort((a, b) => {
       const priceA = parseInt(a.price.replace(/[^\d]/g, ""));
@@ -16,8 +22,24 @@ function Home() {
     })
     .slice(0, 3);
 
+  const dispatch = useDispatch<AppDispatch>();
+
+  useEffect(() => {
+    // جلب الكروت عند تحميل الصفحة
+    dispatch(fetchCards());
+
+    // كل 10 دقائق (600,000ms) يعيد الجلب تلقائيًا
+    const intervalId = setInterval(() => {
+      dispatch(fetchCards());
+    }, 600000); // 10 دقائق
+
+    // تنظيف المؤقت عند إغلاق الصفحة أو إعادة التكوين
+    return () => clearInterval(intervalId);
+  }, [dispatch]);
+
   return (
     <div className={styles.header}>
+      <WakeUpServer />
       <div className={styles.headerTitle}>
         <h1>
           מצא את הנכס <span className={styles.titleText}>המושלם</span> עבורך
@@ -34,7 +56,7 @@ function Home() {
             </button>
           </Link>
 
-          <Link to={"/login"}>
+          <Link to={"/addCard"}>
             <button>
               <House size={16} />
               פרסם נכס
@@ -53,9 +75,13 @@ function Home() {
         </div>
 
         <div className={styles.headerHomeContentCards}>
-          {top3Cards.map((card) => (
-            <Card key={card.id + "-" + card.price} {...card} />
-          ))}
+          {loading
+            ? Array.from({ length: 3 }).map((_, index) => (
+                <CardShimmer key={index} />
+              ))
+            : top3Cards.map((card) => (
+                <Card key={card.id + "-" + card.price} {...card} />
+              ))}
         </div>
 
         <div className={styles.contentCardServices}>

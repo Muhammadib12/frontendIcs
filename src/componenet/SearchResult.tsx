@@ -137,7 +137,6 @@ function SearchResult() {
                     key={id}
                     onClick={(e) => {
                       handleDropOpen(e);
-                      console.log(dropValue, value);
                     }}
                     className={dropValue === value ? styles.or : ""}
                   >

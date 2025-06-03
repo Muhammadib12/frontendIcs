@@ -34,7 +34,7 @@ function Card({
           <h2>{title}</h2>
           <span>{price}</span>
         </div>
-        <span className={styles.numberH}>{location}</span>
+        <span className={styles.numberH}>שכונה,{location}</span>
         <div className={styles.cardDetails}>
           <span>
             <Ruler size={15} /> {size}

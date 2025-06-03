@@ -125,7 +125,11 @@
   cursor: pointer;
   font-size: 1rem;
 }
-
+.submit:disabled {
+  background-color: #ccc; /* لون رمادي */
+  cursor: not-allowed; /* شكل المؤشر يدل على أنه غير ممكن */
+  opacity: 0.7;
+}
 .login {
   display: flex;
   justify-content: center;
@@ -137,6 +141,17 @@
 .login a {
   color: #172f64;
   text-decoration: none;
+}
+
+.invalid {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 4px;
 }
 
 @media screen and (max-width: 780px) {

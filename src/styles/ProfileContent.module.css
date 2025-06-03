@@ -1,0 +1,186 @@
+.profileContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.profileContent h2 {
+  font-size: 1.2rem;
+  color: #141111;
+}
+
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.profileHeadInputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  padding: 0.5rem 0.7rem;
+}
+
+.profileInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.profileInputs input {
+  width: 100%;
+  padding: 0.5rem;
+  border: solid 1px #dadada;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  color: #b6b4b4;
+  font-weight: 200;
+  outline: none;
+  cursor: no-drop;
+}
+
+.profileInputs label {
+  font-size: 0.9rem;
+  color: #172f64;
+  font-weight: 100;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.line {
+  width: 95%;
+  height: 1px;
+  background: #d3d1d1;
+  margin: 0 auto;
+}
+
+.changePasswordCon {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.changePasswordCon h2 {
+  font-size: 1.2rem;
+  color: #141111;
+}
+
+.changPasswordNew {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.changPasswordNew input {
+  width: 100%;
+  padding: 0.5rem;
+  border: solid 1px #dadada;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  color: #b6b4b4;
+  font-weight: 200;
+  outline: none;
+}
+
+.changPasswordNew label {
+  font-size: 0.9rem;
+  color: #172f64;
+  font-weight: 100;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.changPasswordNew input::placeholder {
+  color: #b6b4b4;
+}
+
+.changPasswordNewConf {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+.changPasswordNew1 {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  margin: 0 auto;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  padding: 0.5rem 0.7rem;
+}
+
+.changPasswordNew1 input {
+  width: 100%;
+  padding: 0.5rem;
+  border: solid 1px #dadada;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  color: #b6b4b4;
+  font-weight: 200;
+  outline: none;
+}
+
+.changPasswordNew1 label {
+  font-size: 0.9rem;
+  color: #172f64;
+  font-weight: 100;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.saveBtn {
+  width: 150px;
+  padding: 0.5rem;
+  background: orange;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 0 20px;
+}
+
+.saveBtn:hover {
+  background: #172f64;
+  color: orange;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 880px) {
+  .profileHeadInputs {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .saveBtn {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .changPasswordNewConf {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .profileHeadInputs {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .saveBtn {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .changPasswordNewConf {
+    flex-direction: column;
+  }
+}

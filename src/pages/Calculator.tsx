@@ -4,10 +4,13 @@ import styles from "./../styles/Calculator.module.css";
 
 import downloadPDF from "./../utils/download.ts";
 import calculateMortgage from "../utils/calculateMortgage";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store.ts";
+import BlockedAccount from "../componenet/BlockedAccount.tsx";
 
 function Calculator() {
   const [first, setIsFirst] = useState<boolean>(true);
-
+  const user = useSelector((state: RootState) => state.auth.user);
   const minRe = 1;
   const maxRe = 8;
   const defaultRe = (minRe + maxRe) / 2;
@@ -78,6 +81,10 @@ function Calculator() {
       setOther2(new2);
     }
   };
+
+  if (user?.status === "blocked") {
+    return <BlockedAccount />;
+  }
 
   return (
     <div className={styles.claclCon}>

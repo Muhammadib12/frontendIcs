@@ -12,7 +12,7 @@ import axiosInstance from "../utils/axios";
 import ShimmerLoading from "./ShimmerLoading";
 
 type UserGrowthData = {
-  name: string;
+
   users: number;
 };
 

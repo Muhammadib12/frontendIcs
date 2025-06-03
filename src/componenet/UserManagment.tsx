@@ -36,6 +36,7 @@ function UserManagement() {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setFilterRole('all');
         setLoading(true);
         const response = await axiosInstance.get("/api/admin/users");
         setUsers(response.data);

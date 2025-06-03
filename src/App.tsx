@@ -8,16 +8,16 @@ import SearchHo from "./pages/SearchHo";
 import Calculator from "./pages/Calculator";
 import Footer from "./componenet/Footer";
 import SideBar from "./componenet/SideBar";
-import AddCard from "./pages/addCard";
+import AddCard from "./pages/AddCard";
 import { RootState } from "./redux/store";
 import { useDispatch, useSelector } from "react-redux";
 import { checkAuth } from "./redux/slices/authSlice";
 import { useEffect } from "react";
 import Profile from "./pages/Profile";
 import { ToastContainer } from "react-toastify";
-import Skeleton from "react-loading-skeleton";
+
 import "react-loading-skeleton/dist/skeleton.css";
-import styles from "./styles/ProfileContent.module.css";
+
 import Charts from "./pages/Charts";
 import UserManagment from "./componenet/UserManagment";
 import ShiemmerAll from "./componenet/ShiemmerAll";
@@ -26,16 +26,16 @@ function App() {
   const isOpen = useSelector((state: RootState) => state.SideBar.isOpen);
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
   const user = useSelector((state: RootState) => state.auth.user);
-  const location = useLocation();
+
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch<any>(checkAuth());
   }, [dispatch]);
 
-  const loading = useSelector((state: RootState) => state.auth.loading);
+ 
   const loading1 = useSelector((state: RootState) => state.auth.loading1);
-  const is = true;
+
   return (
     <>
       <NavBar />

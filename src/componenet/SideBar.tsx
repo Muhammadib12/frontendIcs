@@ -1,9 +1,9 @@
-import React from "react";
+
 import styles from "./../styles/SideBar.module.css";
 import { Calculator, Home, LogOut, Search, User, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { closeSidebar, toggleSidebar } from "../redux/slices/sidebarSlice";
+import {  toggleSidebar } from "../redux/slices/sidebarSlice";
 import type { AppDispatch, RootState } from "../redux/store";
 import { logoutUser } from "./../redux/slices/authSlice";
 function SideBar() {

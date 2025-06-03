@@ -17,17 +17,15 @@ function Charts() {
     visits: { count: number; change: number };
   } | null>(null);
 
-  const [loading, setLoading] = useState(true);
+ 
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        setLoading(true);
+       
         const res = await axiosInstance.get("/api/admin/stats");
-        setStats(res.data);
+       
       } catch (err) {
-      } finally {
-        setLoading(false);
-      }
+      } 
     };
 
     fetchStats();

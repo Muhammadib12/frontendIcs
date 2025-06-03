@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import {
   AreaChart,
   Area,
-  XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
@@ -12,7 +11,6 @@ import axiosInstance from "../utils/axios";
 import ShimmerLoading from "./ShimmerLoading";
 
 type UserGrowthData = {
-
   users: number;
 };
 
@@ -27,6 +25,7 @@ const UserGrowthChart = () => {
         const res = await axiosInstance.get("/api/admin/user-growth");
         setData(res.data);
       } catch (error) {
+        // يمكن إضافة toast هنا لاحقًا
       } finally {
         setIsLoading(false);
       }
@@ -34,20 +33,11 @@ const UserGrowthChart = () => {
     fetchData();
   }, []);
 
-  if (isLoading) {
-    return (
-      <>
-        <ShimmerLoading type="chart" />
-        <ShimmerLoading type="chart" />
-      </>
-    );
-  }
-
-  // حساب إجمالي المستخدمين
   const totalUsers = data.reduce(
     (sum: number, item: any) => sum + (item.users || 0),
     0
   );
+
   const latestGrowth =
     data.length > 1
       ? data[data.length - 1]?.users - data[data.length - 2]?.users
@@ -68,7 +58,7 @@ const UserGrowthChart = () => {
         overflow: "hidden",
       }}
     >
-      {/* تأثير ديكوري في الخلفية */}
+      {/* تأثير الخلفية */}
       <div
         style={{
           position: "absolute",
@@ -84,7 +74,6 @@ const UserGrowthChart = () => {
         }}
       />
 
-      {/* العنوان والإحصائيات */}
       <div
         style={{
           display: "flex",
@@ -122,7 +111,6 @@ const UserGrowthChart = () => {
           </p>
         </div>
 
-        {/* סטטיסטיקות מהירות */}
         <div
           style={{
             display: "flex",
@@ -206,7 +194,6 @@ const UserGrowthChart = () => {
         </div>
       </div>
 
-      {/* מעטפת הגרף */}
       <div
         style={{
           background: "rgba(255, 255, 255, 0.95)",
@@ -249,21 +236,18 @@ const UserGrowthChart = () => {
               margin={{ top: 10, right: 10, left: 10, bottom: 10 }}
             >
               <defs>
-                {/* גרדיאנט עשיר יותר */}
                 <linearGradient id="colorUsers" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="0%" stopColor="#667eea" stopOpacity={0.8} />
                   <stop offset="50%" stopColor="#764ba2" stopOpacity={0.4} />
                   <stop offset="100%" stopColor="#667eea" stopOpacity={0.1} />
                 </linearGradient>
 
-                {/* גרדיאנט לקו */}
                 <linearGradient id="strokeGradient" x1="0" y1="0" x2="1" y2="0">
                   <stop offset="0%" stopColor="#667eea" />
                   <stop offset="50%" stopColor="#764ba2" />
                   <stop offset="100%" stopColor="#667eea" />
                 </linearGradient>
 
-                {/* צל לגרף */}
                 <filter
                   id="dropshadow"
                   x="-20%"
@@ -285,18 +269,6 @@ const UserGrowthChart = () => {
                 strokeDasharray="3 3"
                 stroke="rgba(102, 126, 234, 0.2)"
                 vertical={false}
-              />
-
-              <XAxis
-                dataKey="name"
-                axisLine={false}
-                tickLine={false}
-                tick={{
-                  fontSize: 12,
-                  fill: "#64748b",
-                  fontWeight: 500,
-                }}
-                dy={10}
               />
 
               <YAxis
@@ -322,17 +294,12 @@ const UserGrowthChart = () => {
                   backdropFilter: "blur(10px)",
                   padding: "0.75rem 1rem",
                 }}
-                formatter={(value: number, name: string) => [
+                formatter={(value: number) => [
                   <span style={{ fontWeight: 600, color: "#667eea" }}>
                     {value.toLocaleString()} משתמשים
                   </span>,
                   "מספר משתמשים",
                 ]}
-                labelStyle={{
-                  color: "#fff",
-                  fontWeight: 600,
-                  marginBottom: "0.25rem",
-                }}
               />
 
               <Area
@@ -364,7 +331,6 @@ const UserGrowthChart = () => {
         )}
       </div>
 
-      {/* CSS Animation for loading spinner */}
       <style>
         {`
           @keyframes spin {

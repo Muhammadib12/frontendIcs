@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "./../styles/ShiemmerAll.module.css";
 function ShiemmerAll() {
   return (

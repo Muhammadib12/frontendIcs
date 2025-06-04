@@ -37,16 +37,6 @@ function Calculator() {
   const [fixed, setFixed] = useState(33);
   const [variable, setVariable] = useState(34);
 
-  // const result = calculateMortgage({
-  //   firstValue: Number(firstValue),
-  //   secValue: Number(secValue),
-  //   months: valueMonth,
-  //   annualRate: valueRe,
-  //   prime,
-  //   fixed,
-  //   variable,
-  // });
-
   const handleRangeChange = (
     e: React.ChangeEvent<HTMLInputElement>,
     setter: React.Dispatch<React.SetStateAction<number>>
@@ -58,7 +48,6 @@ function Calculator() {
   const handleSliderChange = (
     newVal: number,
     setter: React.Dispatch<React.SetStateAction<number>>,
-    
     other1: number,
     other2: number,
     setOther1: React.Dispatch<React.SetStateAction<number>>,
@@ -74,7 +63,6 @@ function Calculator() {
       setOther2(remaining - Math.floor(remaining / 2));
     } else {
       const ratio1 = other1 / sumOthers;
-     
       const new1 = Math.round(remaining * ratio1);
       const new2 = 100 - val - new1;
       setOther1(new1);
@@ -214,7 +202,6 @@ function Calculator() {
                     handleSliderChange(
                       Number(e.target.value),
                       setPrime,
-                      prime,
                       fixed,
                       variable,
                       setFixed,
@@ -238,7 +225,6 @@ function Calculator() {
                     handleSliderChange(
                       Number(e.target.value),
                       setFixed,
-                      fixed,
                       prime,
                       variable,
                       setPrime,
@@ -262,7 +248,6 @@ function Calculator() {
                     handleSliderChange(
                       Number(e.target.value),
                       setVariable,
-                      variable,
                       prime,
                       fixed,
                       setPrime,
@@ -277,16 +262,15 @@ function Calculator() {
             <button
               className={styles.CalcBtn}
               onClick={() => {
-              const result1 = calculateMortgage({
-  firstValue: Number(firstValue),
-  secValue: Number(secValue),
-  months: valueMonth,
-  annualRate: valueRe,
-  prime,
-  fixed,
-  variable,
-});
-;
+                const result1 = calculateMortgage({
+                  firstValue: Number(firstValue),
+                  secValue: Number(secValue),
+                  months: valueMonth,
+                  annualRate: valueRe,
+                  prime,
+                  fixed,
+                  variable,
+                });
 
                 setResult(result1);
               }}

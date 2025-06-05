@@ -33,15 +33,15 @@ function App() {
     dispatch<any>(checkAuth());
   }, [dispatch]);
 
-    const [status, setStatus] = useState("");
+   
   const [loading2, setLoading2] = useState(true);
   useEffect(() => {
     const pingServer = async () => {
       try {
         setLoading2(true);
-        setStatus("⏳ קןרא לשרת  ...");
+        
         await axios.get("https://backendics.onrender.com/api/keep-alive"); // غيّر هذا للرابط الفعلي
-        setStatus("✅ ready!");
+        
       } catch (e) {
         // setStatus("⚠️ تعذر الوصول إلى الخادم.");
       } finally {

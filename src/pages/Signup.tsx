@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./../styles/Signup.module.css";
+import styles from "./../styles/SignUp.module.css";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { signupUser } from "../redux/slices/authSlice";

@@ -39,7 +39,7 @@ function Home() {
 
   return (
     <div className={styles.header}>
-      <WakeUpServer />
+{/*       <WakeUpServer /> */}
       <div className={styles.headerTitle}>
         <h1>
           מצא את הנכס <span className={styles.titleText}>המושלם</span> עבורך

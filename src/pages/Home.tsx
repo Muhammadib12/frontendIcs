@@ -8,7 +8,7 @@ import stylesCard from "./../styles/ServiceCard.module.css";
 import { useEffect } from "react";
 import { fetchCards } from "./../redux/slices/cardReducer";
 import CardShimmer from "../componenet/CardShimmer";
-import WakeUpServer from "../componenet/WakeUpServer";
+// import WakeUpServer from "../componenet/WakeUpServer";
 
 function Home() {
   const cards = useSelector((state: RootState) => state.cards.items);

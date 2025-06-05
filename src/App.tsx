@@ -12,7 +12,7 @@ import AddCard from "./pages/AddCard";
 import { RootState } from "./redux/store";
 import { useDispatch, useSelector } from "react-redux";
 import { checkAuth } from "./redux/slices/authSlice";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import Profile from "./pages/Profile";
 import { ToastContainer } from "react-toastify";
 
@@ -21,7 +21,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 import Charts from "./pages/Charts";
 import UserManagment from "./componenet/UserManagment";
 import ShiemmerAll from "./componenet/ShiemmerAll";
-
+import axios from "axios";
 function App() {
   const isOpen = useSelector((state: RootState) => state.SideBar.isOpen);
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
